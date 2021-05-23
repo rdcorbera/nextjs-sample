@@ -8,6 +8,7 @@ export async function getStaticProps() {
     props: {
       reservations,
     },
+    revalidate: 1,
   }
 } 
 
