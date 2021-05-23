@@ -23,6 +23,29 @@ const RESERVATIONS = [
         ]
       }
     }
+  },
+  {
+    id: 2,
+    status: "CANCELLED",
+    passengers: [
+      {
+        firstname: "John",
+        lastname: "Doe"
+      }
+    ],
+    trip: {
+      outbound: {
+        flights: [
+          {
+            number: 32,
+            carrier: "LA",
+            origin: "SCL",
+            destination: "LIM",
+            departure: "2020-01-01T04:00:00"
+          }
+        ]
+      }
+    }
   }
 ];
 

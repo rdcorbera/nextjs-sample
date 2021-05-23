@@ -1,7 +1,25 @@
 import Head from 'next/head'
 
-export default function Reservations() {
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3100/api/reservations')
+  const reservations = await res.json()
+
+  return {
+    props: {
+      reservations,
+    },
+  }
+} 
+
+export default function Reservations({ reservations }) {
   return (
-    <div>Reservations</div>
+    <div>
+      <h1>Reservations</h1>
+      <ul>
+        {reservations.map((r) => (
+          <li>{r.id} - {r.status}</li>
+        ))}
+      </ul>
+    </div>
   )
 }
