@@ -18,9 +18,9 @@ export default function Reservation({reservation}) {
   return (
     <div>
       <Head>
-        <title>Reservation Detail</title>
+        <title>Reservation Detail - Server Side</title>
       </Head>
-      <h1>Reservation Nro {reservation.id}</h1>
+      <h1>Reservation Nro {reservation.id} - Server Side</h1>
       <h2>Status: {reservation.status}</h2>
     </div>
   )

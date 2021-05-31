@@ -6,7 +6,7 @@
       "get-users:success",
       "get-user:success",
       "get-reservations:success",
-      "get-reservation:success"
+      "get-reservation:real"
     ]
   },
   {
