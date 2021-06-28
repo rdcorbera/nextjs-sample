@@ -6,7 +6,8 @@
       "get-users:success",
       "get-user:success",
       "get-reservations:success",
-      "get-reservation:real"
+      "get-reservation:real",
+      "get-reservation-bycode:real"
     ]
   },
   {

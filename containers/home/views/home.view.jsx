@@ -7,12 +7,25 @@ import Footer from '../../../components/molecules/footer'
 import Title from '../components/title'
 import SearchBox from '../components/search-box'
 
-export default function HomeContainer() {
+export default function HomeView() {
   const router = useRouter()
 
-  const handleClick = (e) => {
-    e.preventDefault()
-    router.push('reservation')
+  const searchHandler = (searchParams) => {
+    fetch('http://localhost:3100/api/reservations/code/' + searchParams.code)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(res.json())
+      } else {
+        return res.json()
+      }
+    })
+    .then(reservation => {
+      console.log(reservation)
+      router.push('reservation')
+    })
+    .catch(function(error) {
+      console.log(error.message);
+    })
   }
 
   return (
@@ -25,7 +38,7 @@ export default function HomeContainer() {
 
       <main className={styles.main}>
         <Title text="Welcome to SkyX" />
-        <SearchBox searchHandler={handleClick} />
+        <SearchBox onSearch={searchHandler} />
       </main>
 
       <Footer />
