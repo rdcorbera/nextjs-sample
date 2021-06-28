@@ -12,6 +12,11 @@ const RESERVATIONS = [
       }
     ],
     trip: {
+      details: {
+        origin: "SCL",
+        destination: "LIM",
+        departure: "2020-01-01T04:00:00"
+      },
       outbound: {
         flights: [
           {
@@ -36,13 +41,18 @@ const RESERVATIONS = [
       }
     ],
     trip: {
+      details: {
+        origin: "PMC",
+        destination: "SCL",
+        departure: "2020-01-01T04:00:00"
+      },
       outbound: {
         flights: [
           {
             number: 32,
             carrier: "LA",
-            origin: "SCL",
-            destination: "LIM",
+            origin: "PMC",
+            destination: "SCL",
             departure: "2020-01-01T04:00:00"
           }
         ]

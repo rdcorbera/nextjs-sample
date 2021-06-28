@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import styles from './search-box.module.css'
+import styles from './index.module.css'
 
 const SearchBoxComponent = ({ onSearch }) => {
 
