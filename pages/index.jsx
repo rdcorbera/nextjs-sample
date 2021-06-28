@@ -1,8 +1,8 @@
-import Home from '../containers/home'
+import HomeModule from '../modules/home'
 
 export default function Index() {
 
   return (
-    <Home></Home>
+    <HomeModule></HomeModule>
   )
 }

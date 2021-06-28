@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useContext } from 'react'
+
+import { HomeContext } from '../contexts/home.context'
 
 import styles from './home.module.css'
 
@@ -9,6 +12,7 @@ import SearchBox from '../components/search-box'
 
 export default function HomeView() {
   const router = useRouter()
+  const { triggerError } = useContext(HomeContext)
 
   const searchHandler = (searchParams) => {
     fetch('http://localhost:3100/api/reservations/code/' + searchParams.code)
@@ -24,7 +28,7 @@ export default function HomeView() {
       router.push('reservation')
     })
     .catch(function(error) {
-      console.log(error.message);
+      triggerError(searchParams)
     })
   }
 
@@ -37,7 +41,7 @@ export default function HomeView() {
       </Head>
 
       <main className={styles.main}>
-        <Title text="Welcome to SkyX" />
+        <Title text="Welcome to SkyX Airline" />
         <SearchBox onSearch={searchHandler} />
       </main>
 
