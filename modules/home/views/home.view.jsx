@@ -24,7 +24,7 @@ export default function HomeView() {
       }
     })
     .then(reservation => {
-      router.push('reservation')
+      router.push('reservation/' + reservation.id)
     })
     .catch(function(error) {
       triggerError(searchParams)
