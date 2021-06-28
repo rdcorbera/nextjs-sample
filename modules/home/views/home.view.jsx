@@ -24,7 +24,6 @@ export default function HomeView() {
       }
     })
     .then(reservation => {
-      console.log(reservation)
       router.push('reservation')
     })
     .catch(function(error) {

@@ -11,8 +11,8 @@ const SearchBoxComponent = ({ onSearch }) => {
 
   const handleInputChange = (event) => {
     setData({
-        ...data,
-        [event.target.name] : event.target.value
+      ...data,
+      [event.target.name] : event.target.value
     })
   }
 

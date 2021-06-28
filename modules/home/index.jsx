@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import HomeView from './views/home.view'
-import NotFoundView from './views/notfound.view'
 
 import { HomeContext } from './contexts/home.context'
+
+import HomeView from './views/home.view'
+import NotFoundView from './views/notfound.view'
 
 export default function HomeModule() {
 
