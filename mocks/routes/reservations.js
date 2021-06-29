@@ -1,5 +1,3 @@
-const { delLocale } = require("next/dist/next-server/lib/router/router");
-
 const RESERVATIONS = [
   {
     id: 1,
@@ -7,6 +5,7 @@ const RESERVATIONS = [
     status: "BOOKED",
     passengers: [
       {
+        id: 1,
         firstname: "John",
         lastname: "Doe"
       }
@@ -36,8 +35,19 @@ const RESERVATIONS = [
     status: "CANCELLED",
     passengers: [
       {
+        id: 1,
         firstname: "John",
         lastname: "Doe"
+      },
+      {
+        id: 2,
+        firstname: "Jane",
+        lastname: "Doe"
+      },
+      {
+        id: 3,
+        firstname: "Adam",
+        lastname: "Smith"
       }
     ],
     trip: {

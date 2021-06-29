@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-export default function Documentation() {
+export default function FormView({ reservation }) {
   const router = useRouter()
 
   const handleClick = (e) => {
@@ -8,10 +8,10 @@ export default function Documentation() {
     router.push('reservation')
   }
 
-	return (
-		<div>
-			<h1>Complete Documentation</h1>
-			<form>
+  return (
+    <div>
+      <h1>Complete Documentation</h1>
+      <form>
         <fieldset>
           <label>
             Firstname
@@ -24,6 +24,6 @@ export default function Documentation() {
         </fieldset>
         <button onClick={handleClick}>Save</button>
       </form>
-		</div>
-	)
+    </div>
+  )
 }

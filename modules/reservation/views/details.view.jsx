@@ -8,7 +8,7 @@ export default function DetailsView({ reservation }) {
   const router = useRouter()
 
   const handleClick = () => {
-    router.push('/docs')
+    router.push('/docs/' + reservation.id)
   }
 
   return (
