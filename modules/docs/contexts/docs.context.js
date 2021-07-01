@@ -4,5 +4,7 @@ export const DocumentationContext = React.createContext({
   passengers: [],
   selectedPassenger: null,
   fieldsToSave: [],
-  passengersCompleted: []
+  passengersCompleted: [],
+
+  setSelectedPassenger: () => {}
 })
