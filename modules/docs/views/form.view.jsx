@@ -1,11 +1,15 @@
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
+
+import { DocumentationContext } from '../contexts/docs.context'
 
 export default function FormView({ passenger, fields }) {
   const router = useRouter()
+  const { setSelectedPassenger } = useContext(DocumentationContext)
 
   const handleClick = (e) => {
     e.preventDefault()
-    router.push('reservation')
+    setSelectedPassenger(null)
   }
 
   return (
