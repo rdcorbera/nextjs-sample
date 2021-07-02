@@ -10,6 +10,10 @@ import Footer from '../../../components/molecules/footer'
 import Title from '../components/title'
 import SearchBox from '../components/search-box'
 
+/*
+  El manejo de comunicación con el BFF deberia ser mediante un hook
+  Revisar el httpservice
+*/
 export default function HomeView() {
   const router = useRouter()
   const { triggerError } = useContext(HomeContext)
